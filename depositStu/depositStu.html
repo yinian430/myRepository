@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/select2.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="js/skin/layer.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/schoolGradeClass.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/select.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/depositStu.css" media="screen" title="no title">
+    <link rel="stylesheet" href="layui/css/layui.css"  media="all">
+  </head>
+  <body>
+    <div class="header">
+  		<p class="header_nav"><span class="fontW">当前位置：</span>考勤管理 - > 托管生管理</p>
+  	</div>
+    <div class="content">
+      <div id="schoolGradeClass"></div>
+      <div class="content_body">
+        <ul class="select fl layui-nav layui-nav-tree" id="selectLeft" multiple="7">
+        </ul>
+        <div class="fl btnParent">
+          <button type="button" class="addBtn btn btn-default" id="add">添加 > </button>
+          <button type="button" class="deleteBtn btn btn-default" id="delete">删除 < </button>
+        </div>
+        <ul class="select fl layui-nav layui-nav-tree" id="selectRight" multiple="7">
+        </ul>
+      </div>
+      <div class="btnKeep">
+        <button id="save" type="button" class="btn btn-default">保存</button>
+      </div>
+      <p class="hint">
+        <span class="hintTitle">说明：</span>1、按“Shift”+“点击鼠标左键”，可以连续选择多条数据；<br>
+        2、按“Ctrl”+“点击鼠标左键”，可以同时选择多条不连续的数据；
+      </p>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/select2.full.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
+    <script type="text/javascript" src="js/schoolGradeClass.js"></script>
+    <script type="text/javascript" src="js/select.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/depositStu.js"></script>
+  </body>
+</html>

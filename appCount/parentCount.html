@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>家长APP使用情况</title>
+    <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="js/skin/layer.css" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css"  media="all">
+    <link rel="stylesheet" type="text/css" href="js/js/need/laydate.css">
+    <link rel="stylesheet" trpe="text/css" href="css/appCount.css">
+  </head>
+  <body>
+    <div class="parentHeader">
+  		<p class="header_nav"><span class="fontW">当前位置：</span>查询管理 - > <span class="red_span">APP安装率和使用率</span>- > <span class="red_span">家长APP使用情况</span></p>
+  	</div>
+    <div class="parentContent">
+      <!-- 查询老师 -->
+      <p class="parentTitle"><span id="parentClassName"></span>家长APP使用情况</p>
+      <div>
+        <div class="rule">
+          <p class="fl"><span>总人数：<span id="allPeople" class="zhuR">0</span>人</span><span class="mL">安卓：<span id="Parent_usageAateForAndroidPeo" class="zhuR">0</span>人(<span id="Parent_usageAateForAndroid" class="zhuR">0.00%</span>)</span>
+            <span class="mL">苹果：<span id="Parent_usageAateForIosPeo" class="zhuR">0</span>人(<span id="Parent_usageAateForIos" class="zhuR">0.00%</span>)</span><span class="mL">未安装：<span id="Parent_usageAateForPeo" class="zhuR">0</span>人(
+            <span id="Parent_usageAateForList" class="zhuR">0.00%</span>)</span></p>
+          <p class="fr">安卓使用率： <span id="usageAateForAndroid" class="zhuR usage"></span>苹果使用率： <span id="usageAateForIos" class="zhuR usage"></span>合计使用率： <span id="usageAateForAll" class="zhuR usage"></span></p>
+          <p class="zhuR cb">注：1、姓名红色表示未安装app <span class="zhU">2、当天打开1次计入当天使用</span></p>
+        </div>
+        <li class="cb fontW parentDetail_header borderT" style="background-color: #D4E9FC;">
+          <p class="fl borderR borderB borderL parent_num">序号</p>
+          <p class="fl borderR borderB parent_students">姓名</p>
+          <p class="fl borderR borderB parent_Num">登录号码</p>
+          <p class="fl borderR borderB parent_Num">手机系统</p>
+          <p class="fl borderR borderB parent_Num">校信版本</p>
+          <p class="fl borderR borderB parent_Num">使用天数(<span id="parentDate">0</span>天)</p>
+          <p class="fl borderR borderB parent_class">末次登录</p>
+        </li>
+        <ul class="parent_body">
+    			<div id="situationParent">
+
+    			</div>
+    		</ul>
+      </div>
+  		<p class="content_none" id="content_none">暂无数据</p>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/js/laydate.js"></script>
+    <script type="text/javascript" src="js/parentCount.js"></script>
+  </body>
+</html>

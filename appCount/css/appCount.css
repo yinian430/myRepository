@@ -1,0 +1,439 @@
+body{
+	font-family: "微软雅黑";
+}
+.fl{
+	float: left;
+}
+.fr{
+  float: right;
+}
+.cb{
+	clear: both;
+}
+.oh{
+	overflow: hidden;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+.por{
+	position: relative;
+}
+.borB{
+	border-bottom: 1px solid #ddd;
+}
+.borR{
+  border-right: 1px solid #ddd;
+}
+.borT{
+  border-top: 1px solid #ddd;
+}
+.borL{
+	border-left: 1px solid #ddd;
+}
+.borderB{
+	border-bottom: 1px solid #888;
+}
+.borderR{
+  border-right: 1px solid #888;
+}
+.borderT{
+  border-top: 1px solid #888;
+}
+.borderL{
+	border-left: 1px solid #888;
+}
+.borRN{
+	border-right: none!important;
+}
+.borTN{
+	border-top: none!important;
+}
+.borBN{
+	border-bottom: none!important;
+}
+.borLN{
+	border-left: none!important;
+}
+.otL{
+	outline: 1px solid #888;
+}
+.fontW{
+	font-weight: 600;
+}
+
+.header {
+    width: 1031px;
+    margin: auto;
+    background-color: #EFF8FF;
+    border: 1px solid #98C2F2;
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+.header_nav {
+    color: #1372BF;
+}
+.content {
+    width: 1031px;
+    height: 630px;
+    margin: auto;
+    background-color: #EFF8FF;
+    border: 1px solid #98C2F2;
+    margin-top: 5px;
+    padding: 20px 10px;
+}
+.content_head{
+	width: 885px;
+	margin: auto;
+	text-align: center;
+	border: 1px solid #DDDDDD;
+}
+.form_school{
+	height: 38px;
+	background-color: #F9F9F9;
+	margin-bottom: 0;
+}
+.form_school:hover{
+	background-color: #F5F5F5;
+}
+.form_test{
+	background-color: #EFF8FF;
+}
+.formInput{
+  width: 274px;
+  margin-left: 60px;
+  height: 38px;
+  padding-right: 60px;
+  margin-right: 0!important;
+}
+.formInput input{
+	height: 28px;
+  border-radius: 5px;
+	position: relative;
+  top: 5px;
+	text-align: center;
+	border-color: #AAAAAA;
+}
+.formRili{
+  width: 500px;
+  /*margin-left: 60px;*/
+  height: 38px;
+  /*padding-right: 60px;*/
+  /*margin-right: 0!important;*/
+	line-height: 38px;
+}
+.formBtn{
+  width: 240px;
+  height: 38px;
+}
+.formLabel{
+	width: 100px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 15px;
+}
+.formLabelSubjects{
+	width: 150px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  font-weight: 600;
+  font-size: 15px;
+}
+.form_subjects{
+	height: auto;
+}
+.formSubjects{
+	width: auto;
+	margin-left: 190px;
+  margin-right: 10px;
+	text-align: left;
+}
+.layui-form-checkbox{
+	margin-top: 6px;
+}
+.layui-form-select .layui-edge{
+  margin-top: 0px;
+}
+
+.startPoint{
+	width: 0px;
+    position: absolute;
+    top: -1px;
+    left: 233px;
+    height: 51px;
+    overflow: hidden;
+    /* display: none; */
+    transition:width .5s;
+	-moz-transition:width .5s; /* Firefox 4 */
+	-webkit-transition:width .5s; /* Safari and Chrome */
+	-o-transition:width .5s; /* Opera */
+}
+.point{
+	width: 128px;
+	padding: 9px 14px;
+	font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    margin-left: 8px;
+}
+.sanjiao{
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    margin-top: -9px;
+    margin-left: -12px;
+    border-left-color: rgba(0,0,0,0.25);
+    border-right-width: 0;
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid #fff;
+}
+.sanjiao:after{
+	content: " ";
+    position: absolute;
+    right: -13px;
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    border: #bcbec2 solid 1px;
+    border-right: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.endPoint{
+	width: 0px;
+    position: absolute;
+    top: -1px;
+    left: 488px;
+    height: 51px;
+    overflow: hidden;
+		z-index: 2;
+    /* display: none; */
+    transition:width .5s;
+	-moz-transition:width .5s; /* Firefox 4 */
+	-webkit-transition:width .5s; /* Safari and Chrome */
+	-o-transition:width .5s; /* Opera */
+}
+.queryBtn{
+  color: #fff;
+  background-color: #55DD88;
+	cursor: pointer;
+	border: 1px solid #22CC77;
+	border-radius: 7px;
+	display: inline-block;
+	padding: 2px 10px;
+	text-align: center;
+	margin-top: 6px;
+}
+.queryBtn:hover {
+	background-color: #22CC77;
+}
+
+
+/*content*/
+.detail_header{
+	width: 1010px;
+  height: 55px;
+  line-height: 54px;
+  text-align: center;
+  background-color: #D4E9FC;
+}
+.teacher_header{
+	width: 1010px;
+  text-align: center;
+  background-color: #EFF9FF;
+}
+.teacher_headerD{
+	width: 1010px;
+  height: 28px;
+  line-height: 27px;
+  text-align: center;
+  background-color: #D4E9FC;
+}
+.teacher_header p{
+	padding: 5px 0;
+	min-height: 20px;
+}
+.Theight{
+	overflow: hidden;
+}
+.detail_content{
+	background-color: #EFF9FF;
+}
+.content_body{
+	width: 1010px;
+  height: 460px;
+  overflow: auto;
+  white-space: nowrap;
+	/*margin: auto;*/
+}
+.content_none{
+	display: none;
+	text-align: center;
+  font-size: 20px;
+  line-height: 46px;
+}
+.detail_num{
+	width: 35px;
+}
+.teacher_num{
+	width: 50px;
+}
+.detail_class{
+	width: 179px;
+}
+.teacher_class{
+	width: 163px;
+}
+.detail_students{
+  width: 60px;
+}
+.teacher_students{
+	width: 80px;
+}
+.teacher_Num{
+	width: 116px;
+}
+.teacher_Date{
+	width: 100px;
+}
+.detail_rate{
+  width: 365px;
+}
+.hHeight{
+	height: 28px;
+	line-height: 27px;
+}
+.hHeightS{
+	height: 27px;
+	line-height: 27px;
+}
+.rateWidth{
+	width: 121px;
+}
+.lastW{
+	width: 121px;
+}
+.rule{
+	width: 960px;
+	overflow: hidden;
+  line-height: 30px;
+	/*margin: 5px 20px;*/
+}
+.zhuR{
+	color: #f12;
+}
+.mL{
+	margin-left: 10px;
+}
+#content_body{
+	display: none;
+}
+#content_bodyTeacher{
+	display: none;
+}
+.label{
+	margin-right: 10px;
+}
+
+
+/*12.13*/
+.usage{
+	margin-right: 10px;
+}
+.zhU{
+	margin-left: 32px;
+}
+.query_btn{
+	color: #fff;
+	background-color: #55DD88;
+	cursor: pointer;
+	border: 1px solid #22CC77;
+	border-radius: 7px;
+	display: inline;
+	padding: 1px 5px;
+	font-size: 14px;
+	text-align: center;
+	margin-left: 5px;
+}
+.query_btn:hover {
+	background-color: #22CC77;
+}
+.teacher_body{
+	width: 1020px;
+  height: 530px;
+  overflow: auto;
+  white-space: nowrap;
+  /* margin: auto; */
+}
+
+
+/*parentCount.html*/
+.parentTitle{
+	text-align: center;
+	font-size: 16px;
+  font-weight: 600;
+}
+.parent_Num{
+	width: 140px;
+}
+.parent_num{
+	width: 60px;
+}
+.PTheight{
+	overflow: hidden;
+	height: 27px;
+}
+.parent_students{
+	width: 122px;
+}
+.parent_class{
+	width: 190px;
+}
+.parentContent{
+	width: 1000px;
+	height: 660px;
+	margin: auto;
+	background-color: #EFF8FF;
+	border: 1px solid #98C2F2;
+	margin-top: 5px;
+	padding: 20px 10px;
+}
+.parentHeader{
+	width: 1000px;
+	margin: auto;
+	background-color: #EFF8FF;
+	border: 1px solid #98C2F2;
+	margin-top: 20px;
+	padding: 10px 10px;
+}
+.parentDetail_header{
+	width: 940px;
+  height: 28px;
+  line-height: 27px;
+  text-align: center;
+}
+.parent_body{
+	width: 950px;
+	height: 550px;
+	overflow: auto;
+	white-space: nowrap;
+}

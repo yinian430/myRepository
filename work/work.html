@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<title>作业管理</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="js/js/need/laydate.css">
+	<link rel="stylesheet" type="text/css" href="css/work.css">
+</head>
+<body>
+	<div class="header">
+		<p class="header_nav"><span class="fontW">当前位置：</span>考勤管理 - > <span class="red_span">作业管理</span></p>
+	</div>
+	<div class="content">
+		<table class="content_header table table-striped table-bordered table-hover table-condensed">
+			<tr>
+				<td class="className"><span class="importance">*&nbsp;</span><span>学校：</span></td>
+				<td class="por">
+					<select class="js-example-data-array select_xuexiao"  id="select_xuexiao"></select>
+					<div class="classPoint">
+						<div class="point">
+							<div class="sanjiao"></div>
+							<p>请选择学校</p>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="className lh">年级：</td>
+				<td>
+					<select class="js-example-data-array_02 select_nianji" id="select_nianji"></select>
+				</td>
+			</tr>
+			<tr>
+				<td class="className lh">班级：</td>
+				<td>
+					<select class="js-example-data-array_03 select_banji" id="select_banji"></select>
+				</td>
+			</tr>
+			<tr>
+				<td class="className"><span class="importance">*&nbsp;</span><span>时间：</span></td>
+				<td class="por">
+					<div class="demo">
+						<ul class="inline">
+							<div class="startPoint">
+								<div class="point">
+									<div class="sanjiao"></div>
+									<p>请选择开始时间</p>
+								</div>
+							</div>
+							<li class="inline laydate-icon fl" id="start" style="width:200px; margin-right:10px;"></li>
+							<span class="fl">到</span>
+							<div class="endPoint">
+								<div class="point">
+									<div class="sanjiao"></div>
+									<p>请选择结束时间</p>
+								</div>
+							</div>
+							<li class="inline laydate-icon fl" id="end" style="width:200px;margin-left:10px;"></li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><p class="button_ok" id="button_ok">查询</p></td>
+			</tr>
+		</table>
+		<ul class="content_body">
+			<li class="fontW detail_header borderT">
+				<p class="fl borderR borderB borderL detail_title">序号</p>
+				<p class="fl borderR borderB detail_title">年级</p>
+				<p class="fl borderR borderB detail_title">发送者</p>
+				<p class="fl borderR borderB detail_title">发送次数</p>
+				<p class="fl borderR borderB detail_title">操作</p>
+			</li>
+			<div id="situation">
+
+			</div>
+		</ul>
+		<p class="content_none">暂无数据</p>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/handlebars.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/select2.full.js"></script>
+	<script type="text/javascript" src="js/js/laydate.js"></script>
+    <script type="text/x-handlebars-template" id="template_situation">
+      	{{#each timeList}}
+			<div>
+				<li class="detail_content">
+					<p class="fl borderR borderB borderL detail_title {{addOne @index}}">{{addOne @index}}</p>
+					<p class="fl borderR borderB detail_title {{addOne @index}}" id="gradeName">{{gradeName}}</p>
+					<p class="fl borderR borderB detail_title {{addOne @index}}">{{teacherName}}</p>
+					<p class="fl borderR borderB detail_title {{addOne @index}}">{{count}}</p>
+					<p class="fl borderR borderB detail_title {{addOne @index}}"><a class="location_href" teacherName="{{teacherName}}" gradeName="{{gradeName}}" sender="{{sender}}">查看详情</a></p>
+				</li>
+			</div>
+      	{{/each}}
+    </script>
+	<script type="text/javascript" src="js/work.js"></script>
+</body>
+</html>

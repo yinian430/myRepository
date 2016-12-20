@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="img/l_bg.jpg" type="image/x-icon"/>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<title>家长和学生考勤(新)</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="js/skin/layer.css" media="screen" title="no title">
+	<link rel="stylesheet" type="text/css" href="layui/css/layui.css"  media="all">
+	<link rel="stylesheet" type="text/css" href="js/js/need/laydate.css">
+	<link rel="stylesheet" type="text/css" href="css/attendance.css">
+</head>
+<body>
+	<div class="header">
+		<p class="header_nav"><span class="fontW">当前位置：</span>考勤管理 - > <span class="red_span">家长和学生考勤(新)</span></p>
+	</div>
+	<div class="content">
+		<table class="content_header table table-striped table-bordered table-hover table-condensed">
+			<tr>
+				<td class="className" style="padding-bottom: 0px;height: 30px;line-height: 21px;padding-top: 4px;"><span class="importance">*&nbsp;</span><span>学校：</span></td>
+				<td style="padding-bottom: 0px;height: 30px;line-height: 21px;padding-top: 4px;">
+					<select class="js-example-data-array select_xuexiao"  id="select_xuexiao"></select>
+				</td>
+				<td class="className" style="padding-bottom: 0px;height: 30px;line-height: 21px;padding-top: 4px;"><span class="importance">*&nbsp;</span><span>年级：</span></td>
+				<td style="padding-bottom: 0px;height: 30px;line-height: 21px;padding-top: 4px;">
+					<select class="js-example-data-array_02 select_nianji" id="select_nianji"></select>
+				</td>
+				<td class="className" style="padding-bottom: 0px;height: 30px;line-height: 21px;padding-top: 4px;"><span class="importance">*&nbsp;</span><span>班级：</span></td>
+				<td class="por" style="padding-bottom: 0px;height: 30px;line-height: 21px;padding-top: 4px;">
+					<select class="js-example-data-array_03 select_banji" id="select_banji"></select>
+					<div class="classPoint">
+						<div class="point">
+							<div class="sanjiao"></div>
+							<p>请选择班级</p>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="className" style="padding-bottom: 0px;height: 30px;line-height: 21px;padding-top: 4px;"><span class="importance">*&nbsp;</span><span>日期：</span></td>
+				<td class="por" colspan="3" style="padding-bottom: 0px;height: 30px;line-height: 21px;padding-top: 0;">
+					<div class="demo">
+						<ul class="inline" style="margin-top:9px;">
+							<div class="startPoint">
+								<div class="point">
+									<div class="sanjiao"></div>
+									<p>请选择开始时间</p>
+								</div>
+							</div>
+							<li class="inline laydate-icon fl" id="start" style="width:200px; margin-right:10px;margin-left:23px"></li>
+							<span class="fl">到</span>
+							<div class="endPoint">
+								<div class="point">
+									<div class="sanjiao"></div>
+									<p>请选择结束时间</p>
+								</div>
+							</div>
+							<li class="inline laydate-icon fl" id="end" style="width:200px;margin-left:10px;"></li>
+						</ul>
+					</div>
+				</td>
+				<td colspan="2" style="padding-bottom: 0px;height: 30px;line-height: 21px;padding-top: 0;"><label class="labelA">(起止日期不超过31天)</label><p class="button_ok" id="button_ok">查询</p></td>
+			</tr>
+		</table>
+		<p class="rule">考勤排序规则：1、先走读再住校 &nbsp;2、先男后女 &nbsp;3、姓名</p>
+		<p class="rule" style="margin-top:-5px;">备注：走-走读生；住-住校生；男-男生；女-女生；自-自主回家生；校-校车生；托-托管生。</p>
+		<div class="content_body">
+			<div class="auto_x">
+				<div class="div_content div_contentXue borAll fl">
+					<div class="poA">
+						<p class="startID fontW fl studentName bor detail_header">学号</p>
+						<p class="startIDX fontW fl studentName bor borL detail_header">姓名</p>
+					</div>
+					<div id="stuNum_name">
+
+					</div>
+				</div>
+				<div id="situation">
+
+				</div>
+			</div>
+		</div>
+		<p class="content_none">暂无数据</p>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/handlebars.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/select2.full.js"></script>
+	<script type="text/javascript" src="js/layer.js"></script>
+	<script type="text/javascript" src="layui/layui.js"></script>
+	<script type="text/javascript" src="js/js/laydate.js"></script>
+	<script type="text/x-handlebars-template" id="template">
+      {{#each students}}
+		<div>
+			<p class="startID fl bor borT xuehao{{stuNum}}">{{stuNum}}</p>
+			<p class="startIDX fl bor borT borL xuehao{{stuNum}}">{{name}}<br/><span style="color:#f00;">{{flag}}</span></p>
+		</div>
+      {{/each}}
+    </script>
+    <script type="text/x-handlebars-template" id="template_situation">
+      {{#each timeList}}
+		<div class="div_content wh fl">
+			<div class="content_time fontW bor borT borL borR detail_header">
+				<p id="time_date">{{time}}</p>
+			</div>
+			<div>
+				<p class="startIDL fl brR detail_header fontW">首次刷卡</p>
+				<p class="startIDR fl detail_header fontW">末次刷卡</p>
+			</div>
+			{{#each content}}
+				<div class="content_each borAll">
+					<div>
+						<p class="startIDz brT brR xuehao{{stuNum}} fl">
+							<span class="fist">{{recordFist}}<br/>{{schoolCarOnRecordFirst}}<br/>{{schoolCarOnRecordLast}}</span><br id="recordFistBr{{stuNum}}">
+							<span class="fist">{{recodeTime}}<span class="green" id={{fatherRecordFist}}>(父)</span></span><br id="fatherFistBr{{stuNum}}">
+							<span class="fist">{{mothercardNum}}<span class="green" id={{motherRecordFist}}>(母)</span></span>
+						</p>
+						<p class="startIDz fl brT last xuehao{{stuNum}}">
+							<span class="fist">{{recordLast}}<br/>{{schoolCarOffRecordFirst}}<br/>{{schoolCarOffRecordLast}}</span><br id="recordLastBr{{stuNum}}">
+							<span class="fist">{{fatherCardNum}}<span class="green" id={{fatherRecordLast}}>(父)</span></span><br id="fatherLastBr{{stuNum}}">
+							<span class="fist">{{sexID}}<span class="green" id={{motherRecordLast}}>(母)</span></span>
+						</p>
+					</div>
+				</div>
+			 {{/each}}
+		</div>
+      {{/each}}
+    </script>
+	<script type="text/javascript" src="js/attendance.js"></script>
+</body>
+</html>

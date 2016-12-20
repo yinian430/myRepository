@@ -1,0 +1,21 @@
+.select{
+  background-color: #fff;
+  width: 200px;
+  border: 1px solid #A9A9A9;
+  border-radius: 1px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.option{
+  list-style: none;
+  width: auto;
+  height: 34px;
+  line-height: 34px;
+  padding-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+}

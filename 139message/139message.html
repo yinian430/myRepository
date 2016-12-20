@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="img/l_bg.jpg" type="image/x-icon"/>
+    <title>139信息查询</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen" title="no title">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title"> -->
+    <link rel="stylesheet" type="text/css" href="js/js/need/laydate.css">
+    <link rel="stylesheet" type="text/css" href="js/skin/layer.css" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css"  media="all">
+    <link rel="stylesheet" type="text/css" href="css/139message.css" media="screen" title="no title">
+  </head>
+  <body>
+    <div class="header">
+  		<p class="header_nav"><span class="fontW">当前位置：</span>查询管理 - > <span class="red_span">139信息查询</span></p>
+  	</div>
+    <div class="content">
+      <ul class="content_header">
+        <p class="fl laydateTime">开始时间：</p>
+        <li class="inline laydate-icon fl startTime" id="start" style="padding-left: 5px;width:200px; margin-right:10px;"></li>
+        <p class="fl laydateTime">结束时间：</p>
+        <li class="inline laydate-icon fl endTime" id="end" style="padding-left: 5px;width:200px;margin-left:10px;"></li>
+        <li class="layui-form fl">
+          <div class="layui-form-item">
+            <div class="layui-input-block">
+              <select name="emeil" id="emeilSelect" lay-verify="required">
+
+              </select>
+            </div>
+          </div>
+        </li>
+        <li class="fl layui-form">
+          <button class="layui-btn query layui-btn-primary" id="query">查询</button>
+        </li>
+      </ul>
+      <ul class="content_body" id="getInbox">
+        <div class="body_content" id="body_content">
+        </div>
+      </ul>
+      <ul class="content_body" id="getOutbox">
+        <div class="body_content" id="body_Outbox">
+        </div>
+      </ul>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="js/handlebars.min.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
+    <script type="text/javascript" src="js/js/laydate.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/x-handlebars-template" id="template">
+        <li  class="body_title">
+          <ul>
+            <li class="schoolTitle smallTitle fl borRN">学校</li>
+            <li class="phoneTitle smallTitle fl borRN">号码</li>
+            <li class="timeTitle smallTitle fl borRN">收件时间</li>
+            <li class="stateTitle smallTitle fl borRN">状态</li>
+            <li class="contentTitle fl">内容</li>
+          </ul>
+        </li>
+      {{#each content}}
+		    <li class="oh" id="parentLi{{id}}">
+          <ul class="oh" id="hOver{{id}}">
+            <li class="smallContent{{id}} hOver{{id}} lineHSN{{id}} borTN contentBG smallTitle fl borRN" name="{{id}}">
+              {{schoolName}}
+            </li>
+            <li class="smallContent{{id}} hOver{{id}} lineHph{{id}} borTN contentBG smallTitle fl borRN" name="{{id}}" style="word-wrap: break-word;">
+              {{phone}}
+            </li>
+            <li class="smallContent{{id}} hOver{{id}} borTN contentBG smallTitle fl borRN por" name="{{id}}">
+              <p style="position: absolute;top: 50%;left: 50%;margin-left: -55px;margin-top: -19px;">{{write}}</p>
+            </li>
+            <li class="smallContent{{id}} hOver{{id}} lineH{{id}} borTN contentBG smallTitle fl borRN" name="{{id}}">
+              <p>{{flagName}}</p>
+            </li>
+            <li class="contentTitle fl borTN contentBG hOver{{id}}" id="contentContent{{id}}" name="{{id}}">
+              <p>{{content}}</p>
+            </li>
+          </ul>
+          {{#each receList}}
+            <div class="result oh borTN borBN">
+              <ul class="resultUl">
+                <li class="fl resultContent resultContent{{id}} resultContentLin{{id}} resultMoadl borRN">
+                  <p><span>处理时间：</span></p>
+                </li>
+                <li class="fl resultContent resultContent{{id}} resultContentLin{{id}} resultTime borRN">
+                  <p>{{insertTime}}</p>
+                </li>
+                <li class="fl resultContent resultContent{{id}} resultContentLin{{id}} resultMoadl borRN">
+                  <p><span>客服人员：</span></p>
+                </li>
+                <li class="fl resultContent resultContent{{id}} resultContentLin{{id}} resulter borRN">
+                  <p>{{userName}}</p>
+                </li>
+                <li class="fl resultContent resultContent{{id}} resultContentLin{{id}} resultMoadl borRN">
+                  <p><span>处理结果：</span></p>
+                </li>
+                <li class="fl resultContent resultContent{{id}} handleResult">
+                  <p id="resultNowheight{{id}}">{{content}}</p>
+                </li>
+              </ul>
+            </div>
+          {{/each}}
+          <div class="layui-form flagBody borTN" id="flag{{id}}">
+            <label class="layui-form-label">录入处理结果：</label>
+            <input id="ruseltContent{{id}}" type="text" name="title" required  lay-verify="required" placeholder="请输入内容" autocomplete="off" class="layui-input flagInput">
+            <button class="layui-btn flagButton layui-btn-primary" id="submitRuselt{{id}}" name="{{id}}">提交</button>
+          </div>
+        </li>
+      {{/each}}
+    </script>
+    <script type="text/x-handlebars-template" id="template_outbox">
+        <li  class="body_title">
+          <ul>
+            <li class="schoolTitle smallTitle fl borRN">学校</li>
+            <li class="phoneTitle smallTitle fl borRN">号码</li>
+            <li class="timeTitle smallTitle fl borRN">收件时间</li>
+            <li class="stateTitle smallTitle fl borRN">状态</li>
+            <li class="contentTitle fl">内容</li>
+          </ul>
+        </li>
+      {{#each content}}
+		    <li class="oh" id="parentLi{{id}}">
+          <ul class="oh" id="hOver{{id}}">
+            <li class="smallContent{{id}} hOver{{id}} lineHSN{{id}} borTN contentBG smallTitle fl borRN" name="{{id}}">
+              {{schoolName}}
+            </li>
+            <li class="smallContent{{id}} hOver{{id}} lineHph{{id}} borTN contentBG smallTitle fl borRN" name="{{id}}" style="word-wrap: break-word;">
+              {{phone}}
+            </li>
+            <li class="smallContent{{id}} hOver{{id}} borTN contentBG smallTitle fl borRN por" name="{{id}}">
+              <p style="position: absolute;top: 50%;left: 50%;margin-left: -55px;margin-top: -19px;">{{write}}</p>
+            </li>
+            <li class="smallContent{{id}} hOver{{id}} lineH{{id}} borTN contentBG smallTitle fl borRN" name="{{id}}">
+              <p>{{flagName}}</p>
+            </li>
+            <li class="contentTitle fl borTN contentBG hOver{{id}}" id="contentContent{{id}}" name="{{id}}">
+              <p>{{content}}</p>
+            </li>
+          </ul>
+        </li>
+      {{/each}}
+    </script>
+    <script type="text/javascript" src="js/139message.js"></script>
+  </body>
+</html>

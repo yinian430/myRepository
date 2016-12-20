@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript" src="work/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+      $.ajax({
+        type:"post",
+        url:"http://192.168.1.222/app/newNoticeAjax",
+				data:{
+					sendObject:1,
+					userid:455,
+					sendtime:"2015-12-15 11:25:16",
+					classsid:47
+        },
+        success:function(data){
+          console.log(data)
+        }
+      })
+    </script>
+  </body>
+</html>

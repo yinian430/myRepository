@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<title>作业管理详情</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="js/js/need/laydate.css">
+	<link rel="stylesheet" type="text/css" href="css/workStatus.css">
+</head>
+<body>
+	<div class="header">
+		<p class="header_nav"><span class="fontW">当前位置：</span>考勤管理 - > <span class="red_span">作业管理</span> - > <span id="teacherName"></span></p>
+	</div>
+	<div class="content">
+		<ul class="content_body">
+			<li class="fontW detail_header borderT">
+				<p class="fl borderR borderB borderL detail_duan">序号</p>
+				<p class="fl borderR borderB detail_duan">作业科目</p>
+				<p class="fl borderR borderB detail_chang">作业内容</p>
+				<p class="fl borderR borderB detail_chang">录入时间</p>
+				<p class="fl borderR borderB detail_chang">是否需要签收</p>
+				<p class="fl borderR borderB detail_chang">是否在线提交作业</p>
+				<p class="fl borderR borderB detail_duan">发送平台</p>
+				<p class="fl borderR borderB detail_duan">完成情况</p>
+			</li>
+			<div id="situation">
+
+			</div>
+		</ul>
+		<p class="content_none">暂无数据</p>
+		<!-- 模态框 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		  <!-- 动态数据 -->
+		    <div class="modal-content max">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">【<span>2016-10-12</span>】<span>语文</span>作业完成情况</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<div class="cb modal_body">
+		      		<ul>
+		      			<li class="modal_bb finished fl" id="reading_finished">已阅读（<span id="readNum"></span>）：</li>
+		      			<li class="modal_bb borderL unfinished fl unfinished_L" id="reading_unfinished">未阅读（<span id="unreadNum"></span>）：</li>
+		      		</ul>
+		      		<div class="content_reading cb">
+			      		<div id="reading_finished_content" class="reading_finished_block">
+
+			      		</div>
+			      		<p class="reading_finished_none">
+			      			暂无数据
+			      		</p>
+		      		</div>
+		      		<div class="content_unreading cb">
+			      		<div id="reading_unfinished_content" class="reading_unfinished_block">
+
+			      		</div>
+			      		<p class="reading_unfinished_none">
+			      			暂无数据
+			      		</p>
+		      		</div>
+		        </div>
+		        <div class="cb modal_body">
+		      		<ul>
+		      			<li class="modal_bb finished fl" id="sign_finished">已签收（<span id="signNum"></span>）：</li>
+		      			<li class="modal_bb borderL unfinished fl unfinished_L" id="sign_unfinished">未签收（<span id="unsignNum"></span>）：</li>
+		      		</ul>
+		      		<div class="content_sign cb">
+			      		<div id="sign_content" class="sign_block">
+
+			      		</div>
+			      		<p class="sign_none">
+			      			暂无数据
+			      		</p>
+		      		</div>
+		        	<div class="content_unsign cb">
+			      		<div id="unsign_content" class="unsign_block">
+
+			      		</div>
+			      		<p class="unsign_none">
+			      			暂无数据
+			      		</p>
+		      		</div>
+		        </div>
+		        <div class="cb modal_body">
+		      		<ul>
+		      			<li class="modal_bb finished fl" id="finish_finished">已完成（<span id="finishNum"></span>）：</li>
+		      			<li class="modal_bb borderL unfinished fl unfinished_L" id="finish_unfinished">未完成（<span id="unfinishNum"></span>）：</li>
+		      		</ul>
+		      		<div class="content_finish cb">
+			      		<div id="finish_content" class="finish_block">
+
+			      		</div>
+			      		<p class="finish_none">
+			      			暂无数据
+			      		</p>
+		      		</div>
+		      		<div class="content_unfinish cb">
+			      		<div id="unfinish_content" class="unfinish_block">
+
+			      		</div>
+			      		<p class="unfinish_none">
+			      			暂无数据
+			      		</p>
+		      		</div>
+		        </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	</div>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/handlebars.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/select2.full.js"></script>
+	<script type="text/javascript" src="js/js/laydate.js"></script>
+    <script type="text/x-handlebars-template" id="template_situation">
+      	{{#each timeList}}
+			<div>
+				<li class="fontW detail_content">
+					<p class="fl borderR borderB borderL detail_duan detail_henght {{addOne @index}}">{{addOne @index}}</p>
+					<p class="fl borderR borderB detail_duan detail_henght {{addOne @index}}">{{courseName}}</p>
+					<p class="fl borderR borderB detail_chang detail_henght {{addOne @index}}"><a class="href_workContent" name="{{id}}">点击查看作业内容</a></p>
+					<p class="fl borderR borderB detail_chang detail_henght {{addOne @index}}">{{inputTime}}</p>
+					<p class="fl borderR borderB detail_chang detail_henght {{addOne @index}}"><img id="img_okL{{addOne @index}}" class="img_ok" src="img/ok.png"></p>
+					<p class="fl borderR borderB detail_chang detail_henght {{addOne @index}}"><img id="img_okR{{addOne @index}}" class="img_ok" src="img/ok.png"></p>
+					<p class="fl borderR borderB detail_duan detail_henght {{addOne @index}}">{{sourceId}}</p>
+					<p class="fl borderR borderB detail_duan detail_henght {{addOne @index}}"><a class="workDetail" name="{{id}}" data-toggle="modal" data-target="#myModal">详情</a></p>
+				</li>
+			</div>
+      	{{/each}}
+    </script>
+    <script type="text/x-handlebars-template" id="template_reading_finished">
+      	{{#each timeList}}
+			<div class="modal_content fl">
+	        	<p>{{name}}</p>
+			</div>
+      	{{/each}}
+    </script>
+    <script type="text/x-handlebars-template" id="template_reading_unfinished">
+      	{{#each timeList}}
+			<div class="modal_content fl">
+	        	<p>{{name}}</p>
+			</div>
+      	{{/each}}
+    </script>
+    <script type="text/x-handlebars-template" id="template_sign">
+      	{{#each timeList}}
+			<div class="modal_content fl">
+	        	<p>{{name}}</p>
+			</div>
+      	{{/each}}
+    </script>
+    <script type="text/x-handlebars-template" id="template_unsign">
+      	{{#each timeList}}
+			<div class="modal_content fl">
+	        	<p>{{name}}</p>
+			</div>
+      	{{/each}}
+    </script>
+    <script type="text/x-handlebars-template" id="template_finish">
+      	{{#each timeList}}
+			<div class="modal_content fl">
+	        	<p>{{name}}</p>
+			</div>
+      	{{/each}}
+    </script>
+    <script type="text/x-handlebars-template" id="template_unfinish">
+      	{{#each timeList}}
+			<div class="modal_content fl">
+	        	<p>{{name}}</p>
+			</div>
+      	{{/each}}
+    </script>
+	<script type="text/javascript" src="js/workStatus.js"></script>
+</body>
+</html>

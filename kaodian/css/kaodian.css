@@ -1,0 +1,166 @@
+body{
+	font-family: "微软雅黑";
+}
+.fl{
+	float: left;
+}
+.fr{
+  float: right;
+}
+.cb{
+	clear: both;
+}
+.oh{
+	overflow: hidden;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+.por{
+	position: relative;
+}
+.borB{
+	border-bottom: 1px solid #888;
+}
+.borRN{
+	border-right: none!important;
+}
+.borTN{
+	border-top: none!important;
+}
+.borBN{
+	border-bottom: none!important;
+}
+
+.header {
+    width: 1000px;
+    margin: auto;
+    background-color: #EFF8FF;
+    border: 1px solid #98C2F2;
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+.header_nav {
+    color: #1372BF;
+}
+.content {
+    width: 1000px;
+    height: 573px;
+    margin: auto;
+    background-color: #EFF8FF;
+    border: 1px solid #98C2F2;
+    margin-top: 5px;
+    padding: 20px 10px;
+}
+
+.query{
+	margin-left: 56px;
+	border-radius: 5px;
+}
+.content_body{
+	width: 900px;
+  max-height: 500px;
+  margin: auto;
+  border: 1px solid #888;
+	overflow-y: auto;
+	border-radius: 5px;
+}
+.content_body::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+.content_body::-webkit-scrollbar-thumb{
+    height: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+.content_body li{
+	padding: 5px 10px;
+	text-align: center;
+	margin: 5px 6px;
+}
+.content_head{
+	margin-bottom: 14px;
+}
+.order{
+	width: 28px;
+}
+.body_head{
+	overflow: hidden;
+	background-color: #D4E9FC;
+}
+.headR{
+	width: 280px;
+}
+.xian{
+	height: 1px;
+	width: 890px;
+	position: absolute;
+	left: 0;
+	background-color: #888;
+}
+.frDiv{
+	width: 280px;
+}
+.parent:before{
+	content:"";
+	width: 15px;
+	height: 14px;
+	margin-right: 5px;
+	margin-left: -15px;
+	display: inline-block;
+	border-left: 1px solid #B2B2B2;
+	border-bottom: 1px solid #B2B2B2;
+}
+.parentAdd{
+	color: #22CC77;
+	cursor: pointer;
+	border: 1px solid #22CC77;
+	border-radius: 7px;
+}
+.parentAdd:hover{
+	color: #fff;
+	background-color: #55DD88;
+}
+.parentUpdate{
+	color: #29B8E0;
+	cursor: pointer;
+	border: 1px solid #29B8E0;
+	border-radius: 7px;
+}
+.parentUpdate:hover{
+	color: #fff;
+	background-color: #33BBDD;
+}
+.parentDel{
+	color: #EE3333;
+	cursor: pointer;
+	border: 1px solid #EE3333;
+	border-radius: 7px;
+}
+.parentDel:hover{
+	color: #fff;
+	background-color: #FF0000;
+}
+.addParent{
+	color: #34A8FF;
+	background-color: #fff;
+	cursor: pointer;
+	border: 1px solid #34A8FF;
+	border-radius: 7px;
+	display: none;
+}
+.addParent:hover{
+	color: #fff;
+	background-color: #34A8FF;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>考题详情</title>
+    <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="js/skin/layer.css" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css"  media="all">
+    <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" href="css/examdetail.css" media="screen" title="no title">
+  </head>
+  <body>
+    <div class="header">
+  		<p class="header_nav"><span class="fontW">当前位置：</span>成绩管理 - > <span class="red_span">考题详情</span></p>
+  	</div>
+    <div class="content">
+      <div class="layui-form content_head">
+        <div class="layui-form-item form_school borTN borLN borRN">
+          <label class="layui-form-label formLabel">学期：</label>
+          <div class="layui-input-block formInput">
+            <select name="emeil" id="trem" lay-verify="required" lay-filter="trem">
+              <option value="1">请选择</option>
+            </select>
+          </div>
+        </div>
+        <div class="layui-form-item form_school borTN borLN borRN form_test">
+          <label class="layui-form-label formLabel">考试：</label>
+          <div class="layui-input-block formInput">
+            <select name="emeil" id="exam" lay-verify="required" lay-filter="exam">
+              <option value="1">请选择</option>
+            </select>
+          </div>
+        </div>
+        <div class="layui-form-item form_school borTN borLN borRN borBN form_subjects" id="form_subjects">
+          <label class="layui-form-label formLabelSubjects" id="formLabelSubjects">科目：</label>
+          <div class="layui-input-block formInput formSubjects" id="formSubjects">
+          </div>
+        </div>
+      </div>
+      <p class="zhuyi">
+        注意：考点为必填，类型和满分要么都填，要么都不填！
+      </p>
+      <div class="content_body" id="content_body">
+
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="js/jquery.ztree.excheck.js"></script>
+    <script type="text/javascript" src="js/examdetail.js"></script>
+  </body>
+</html>

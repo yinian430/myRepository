@@ -1,0 +1,245 @@
+
+.fl{
+	float: left;
+}
+.cb{
+	clear: both;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+.por{
+	position: relative;
+}
+.border{
+	border: 1px solid #888;
+}
+.borderR{
+	border-right: 1px solid #888;
+}
+.borderR_n{
+	border-right: none;
+}
+.borderL{
+	border-left: 1px solid #888;
+}
+.borderT{
+	border-top: 1px solid #888;
+}
+.borderB{
+	border-bottom: 1px solid #888;
+}
+.content{
+	width: 1000px;
+	height: 543px;
+	margin: auto;
+	background-color:#EFF8FF;
+	border:1px solid #98C2F2;
+	margin-top: 5px;
+	padding: 20px 10px;
+}
+.content_header{
+	width: 700px;
+	height: 140px;
+	margin: auto;
+	text-align: center;
+}
+.className{
+	width: 180px;
+	font-weight: bolder;
+}
+.select2-container{
+	width: 276px!important;
+}
+.select_xuexiao{
+	height: 20px;
+}
+.select2-search{
+	display: none;
+}
+.select2-results{
+	text-align: center;
+}
+.content_none{
+	display: none;
+	text-align: center;
+    font-size: 20px;
+    line-height: 46px;
+}
+.button_ok{
+	color: #333;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 1px 12px;
+}
+.table>thead:first-child>tr:first-child>td{
+	border: 1px solid #888!important;
+}
+.table-bordered {
+     border: none;
+}
+.header{
+	width: 1000px;
+    margin: auto;
+    background-color: #EFF8FF;
+    border: 1px solid #98C2F2;
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+.fontW{
+	font-weight: 600;
+}
+.header_nav{
+	color: #1372BF;
+}
+.red_span{
+	color: #f00;
+}
+.point{
+	width: 128px;
+	padding: 9px 14px;
+	font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    margin-left: 8px;
+}
+.sanjiao{
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    margin-top: -9px;
+    margin-left: -12px;
+    border-left-color: rgba(0,0,0,0.25);
+    border-right-width: 0;
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid #fff;
+}
+.sanjiao:after{
+	content: " ";
+    position: absolute;
+    right: -13px;
+    top: -6px;
+    width: 12px;
+    height: 12px;
+    border: #bcbec2 solid 1px;
+    border-right: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.startPoint{
+	width: 0px;
+    position: absolute;
+    top: 7px;
+    left: 246px;
+    height: 51px;
+    overflow: hidden;
+    /* display: none; */
+    transition:width .5s;
+	-moz-transition:width .5s; /* Firefox 4 */
+	-webkit-transition:width .5s; /* Safari and Chrome */
+	-o-transition:width .5s; /* Opera */
+}
+.endPoint{
+	width: 0px;
+    position: absolute;
+    top: 7px;
+    left: 480px;
+    height: 51px;
+    overflow: hidden;
+    /* display: none; */
+    transition:width .5s;
+	-moz-transition:width .5s; /* Firefox 4 */
+	-webkit-transition:width .5s; /* Safari and Chrome */
+	-o-transition:width .5s; /* Opera */
+
+}
+.classPoint{
+	width: 0px;
+    position: absolute;
+    top: -1px;
+    left: 398px;
+    height: 51px;
+    overflow: hidden;
+    /* display: none; */
+    transition: width .5s;
+    -moz-transition: width .5s;
+    -webkit-transition: width .5s;
+    -o-transition: width .5s;
+}
+.laydate_body .laydate_y .laydate_yms{
+	width: 125px!important;
+}
+.laydate_body .laydate_ym .laydate_yms{
+	left: -6px!important;
+	height: 186px!important;
+}
+.laydate_body .laydate_m .laydate_yms{
+	width: 113px!important;
+}
+
+
+
+.content_body{
+	width: 960px;
+    height: 300px;
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: 12px;
+    margin-left: 10px;
+    display: none;
+}
+.detail_header{
+	width: 940px;
+  height: 55px;
+  line-height: 54px;
+  text-align: center;
+  background-color: #D4E9FC;
+}
+.detail_title{
+	width: 188px;
+}
+.detail_content{
+	width: 940px;
+	height: 31px;
+	line-height: 30px;
+  text-align: center;
+  background-color: #EFF9FF;
+}
+.location_href{
+	cursor: pointer;
+}
+.importance{
+    color: #f00;
+    line-height: 28px;
+    font-weight: bolder;
+}
+.lh{
+    line-height: 27px;
+}

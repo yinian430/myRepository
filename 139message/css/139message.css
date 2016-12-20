@@ -1,0 +1,178 @@
+
+body{
+	font-family: "微软雅黑";
+}
+.fl{
+	float: left;
+}
+.fr{
+  float: right;
+}
+.cb{
+	clear: both;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+.por{
+	position: relative;
+}
+.oh{
+	overflow: hidden;
+}
+.borRN{
+	border-right: none!important;
+}
+.borTN{
+	border-top: none!important;
+}
+.borBN{
+	border-bottom: none!important;
+}
+
+.header {
+    width: 1000px;
+    margin: auto;
+    background-color: #EFF8FF;
+    border: 1px solid #98C2F2;
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+.header_nav {
+    color: #1372BF;
+}
+.content {
+    width: 1000px;
+    height: 573px;
+    margin: auto;
+    background-color: #EFF8FF;
+    border: 1px solid #98C2F2;
+    margin-top: 5px;
+    padding: 20px 10px;
+}
+
+.laydateTime{
+	line-height: 36px;
+  font-size: 14px;
+}
+.layui-form-item{
+  margin-bottom: 0;
+}
+.layui-input-block{
+	margin-left: 30px;
+}
+.query{
+	margin-left: 30px;
+}
+
+.content_body{
+	padding: 0px 36px;
+	max-height: 500px;
+	overflow: auto;
+}
+.content_header{
+	padding: 0 20px;
+	display: inline-block;
+	margin-bottom: 30px;
+}
+.body_title{
+	overflow: hidden;
+	width: 930px;
+	margin: auto;
+}
+.smallTitle{
+	background-color: #D4E9FC;
+	width: 98px;
+	padding: 10px 5px;
+	text-align: center;
+	border: 1px solid #888888;
+}
+.contentTitle{
+	background-color: #D4E9FC;
+	width: 465px;
+	padding: 10px 5px;
+	text-align: center;
+	border: 1px solid #888888;
+}
+.contentBG{
+	background-color: #EFF8FF;
+}
+.flagInput{
+	display: inline-block;
+	width: 640px;
+	height: 26px;
+	margin-top: 5px;
+}
+.flagBody{
+	background-color: #fff;
+	height: 0px;
+	border: none;
+	width: 911px;
+	transition: all .5s;
+	overflow: hidden;
+}
+.layui-form-label{
+	width: 110px;
+}
+.layui-form-label{
+	padding: 8px 15px;
+}
+.flagButton{
+	height: 26px;
+	line-height: 26px;
+	margin-top: -2px;
+	margin-left: 15px;
+}
+
+.result{
+	border: 1px solid #888888;
+	width: 911px;
+}
+.resultUl{
+	overflow: hidden;
+	padding: 1px;
+}
+.resultContent{
+	border: 1px solid #FCC566;
+  text-align: center;
+	padding: 8px 15px;
+	height: 19px;
+	background-color: #FFF3CA;
+}
+.resulter{
+	width: 72px;
+}
+.resultMoadl{
+	width: 70px;
+	font-weight: 600;
+}
+.handleResult{
+	width: 302px;
+}
+#getInbox{
+	display: none;
+}
+.layui-layer-btn .layui-layer-btn0{
+	border-color: #000!important;
+  background-color: #000!important;
+}
+.layui-layer-title{
+	background-color: #000!important;
+  color: #fff!important;
+}
+.endTime{
+	height: 36px!important;
+	line-height: 36px!important;
+}
+.startTime{
+	height: 36px!important;
+	line-height: 36px!important;
+}

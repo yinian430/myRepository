@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>考点查询</title>
+    <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="js/skin/layer.css" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css"  media="all">
+    <link rel="stylesheet" href="css/kaodian.css" media="screen" title="no title">
+  </head>
+  <body>
+    <div class="header">
+  		<p class="header_nav"><span class="fontW">当前位置：</span>成绩管理 - > <span class="red_span">考点</span></p>
+  	</div>
+    <div class="content">
+      <div class="layui-form fl content_head">
+        <div class="layui-form-item">
+          <label class="layui-form-label">阶段：</label>
+          <div class="layui-input-inline">
+            <select name="emeil" id="stage" lay-verify="required" lay-filter="stage">
+              <option value="1">小学</option>
+              <option value="2">初中</option>
+              <option value="3">高中</option>
+            </select>
+          </div>
+          <label class="layui-form-label">课程：</label>
+          <div class="layui-input-inline">
+            <select name="emeil" id="course" lay-verify="required" lay-filter="course">
+            </select>
+          </div>
+          <button class="layui-btn query layui-btn-primary" id="query">查询</button>
+        </div>
+      </div>
+      <div class="content_body cb">
+        <ul class="body_head borB">
+          <li class="fl">名称</li>
+          <div class="fr headR">
+            <li class="fl">排序</li>
+            <li class="fl handle_title">操作</li>
+            <li class="fr addParent" id="addParent">添加根类</li>
+          </div>
+        </ul>
+        <div class="por" id="content_body">
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/kaodian.js"></script>
+  </body>
+</html>

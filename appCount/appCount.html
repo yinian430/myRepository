@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>APP安装率和使用率</title>
+    <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="js/skin/layer.css" media="screen" title="no title">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css"  media="all">
+    <link rel="stylesheet" type="text/css" href="js/js/need/laydate.css">
+    <link rel="stylesheet" trpe="text/css" href="css/appCount.css">
+  </head>
+  <body>
+    <div class="header">
+  		<p class="header_nav"><span class="fontW">当前位置：</span>查询管理 - > <span class="red_span">APP安装率和使用率</span></p>
+  	</div>
+    <div class="content">
+      <div class="layui-form content_head">
+        <div class="layui-form-item form_school">
+          <label class="layui-form-label formLabel borR">学校：</label>
+          <div class="layui-input-inline formInput borR">
+            <select name="emeil" id="trem" lay-verify="required" lay-filter="trem">
+              <option value="1">请选择</option>
+            </select>
+          </div>
+          <label class="layui-form-label formLabel borR">对象：</label>
+          <div class="layui-input-inline formInput">
+            <input type="radio" name="sex" value="1" title="家长" lay-filter="sex" checked>
+            <input type="radio" name="sex" value="2" title="老师" lay-filter="sex">
+          </div>
+        </div>
+        <div class="form_school form_test borT">
+          <label class="layui-form-label formLabel borR">时间：</label>
+          <div class="layui-input-inline formRili borR">
+            <div class="demo">
+  						<ul class="inline">
+  							<div class="startPoint">
+  								<div class="point">
+  									<div class="sanjiao"></div>
+  									<p>请选择开始时间</p>
+  								</div>
+  							</div>
+  							<li class="inline laydate-icon fl" id="start" style="width:200px;margin: 7px 10px;"></li>
+  							<span class="fl">到</span>
+  							<div class="endPoint">
+  								<div class="point">
+  									<div class="sanjiao"></div>
+  									<p>请选择结束时间</p>
+  								</div>
+  							</div>
+  							<li class="inline laydate-icon fl" id="end" style="width:200px;margin:7px 0 7px 10px;"></li>
+  						</ul>
+  					</div>
+          </div>
+          <div class="layui-input-inline formBtn">
+            <label class="label">(起止日期不超过31天)</label>
+            <p class="queryBtn" id="queryBtn">查询</p>
+          </div>
+        </div>
+      </div>
+      <!-- 查询家长 -->
+      <div id="content_body">
+        <p class="rule zhuR">注：每天平均使用人数：当天打开1次计入当天使用人数</p>
+        <li class="fontW detail_header borderT">
+          <p class="fl borderR borderB borderL detail_num">序号</p>
+          <p class="fl borderR borderB detail_class">班级</p>
+          <p class="fl borderR borderB detail_students">学生人数</p>
+          <div class="fl borderR borderB detail_rate">
+            <ul>
+              <li class="hHeightS otL">安装率(安装人数/总人数)</li>
+              <li class="hHeightS">
+                <p class="fl rateWidth borderR">安卓</p>
+                <p class="fl rateWidth borderR">苹果</p>
+                <p class="fl rateWidth">合计</p>
+              </li>
+            </ul>
+          </div>
+          <div class="fl borderR borderB detail_title detail_rate">
+            <ul>
+              <li class="hHeightS otL">使用率(<span id="thisDate">0</span>天)(每天平均使用人数/安装人数)</li>
+              <li class="hHeightS">
+                <p class="fl rateWidth borderR">安卓</p>
+                <p class="fl rateWidth borderR">苹果</p>
+                <p class="fl rateWidth">合计</p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <ul class="content_body">
+    			<div id="situation">
+
+    			</div>
+    		</ul>
+      </div>
+      <!-- 查询老师 -->
+      <div id="content_bodyTeacher">
+        <div class="rule">
+          <p class="fl"><span>总人数：<span id="allPeople" class="zhuR">0</span>人</span><span class="mL">安卓：<span id="androidPeople" class="zhuR">0</span>人(<span id="androidPeopleB" class="zhuR">0.00%</span>)</span>
+            <span class="mL">苹果：<span id="iosPeople" class="zhuR">0</span>人(<span id="iosPeopleB" class="zhuR">0.00%</span>)</span><span class="mL">未安装：<span id="nonePeople" class="zhuR">0</span>人(
+            <span id="nonePeopleB" class="zhuR">0.00%</span>)</span></p>
+          <p class="fr">安卓使用率： <span id="usageAateForAndroid" class="zhuR usage"></span>苹果使用率： <span id="usageAateForIos" class="zhuR usage"></span>合计使用率： <span id="usageAateForAll" class="zhuR usage"></span></p>
+          <p class="zhuR cb">注：1、姓名红色表示未安装app <span class="zhU">2、班级绿色表示老师为此班的班主任</span> <span class="zhU">3、当天打开1次计入当天使用</span></p>
+        </div>
+        <li class="cb fontW teacher_headerD borderT">
+          <p class="fl borderR borderB borderL teacher_num">序号</p>
+          <p class="fl borderR borderB teacher_students">姓名</p>
+          <p class="fl borderR borderB teacher_students">角色</p>
+          <p class="fl borderR borderB teacher_class">班级</p>
+          <p class="fl borderR borderB teacher_Num">登录号码</p>
+          <p class="fl borderR borderB teacher_Num">手机系统</p>
+          <p class="fl borderR borderB teacher_Num">校信版本</p>
+          <p class="fl borderR borderB teacher_Num">使用天数(<span id="thisDateTeacher">0</span>天)</p>
+          <p class="fl borderR borderB teacher_class">末次登录</p>
+        </li>
+        <ul class="teacher_body">
+    			<div id="situationTeacher">
+
+    			</div>
+    		</ul>
+      </div>
+  		<p class="content_none" id="content_none">暂无数据</p>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/layer.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/js/laydate.js"></script>
+    <script type="text/javascript" src="js/appCount.js"></script>
+  </body>
+</html>

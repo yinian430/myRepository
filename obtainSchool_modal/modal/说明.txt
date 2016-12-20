@@ -1,0 +1,13 @@
+选择学校时会暴露出学校id：schoolID，
+
+选择年级时会暴露出年级类型id：ClassTypeID和入学年：grade，
+
+选择班级时会暴露出班级id：schoolClassID
+
+根据需求选择需要的数据
+
+设置id=content的标签下将显示模块
+
+引入obtainSchool.css和obtainSchool.js
+
+基于bootstrap,select2和jQuery

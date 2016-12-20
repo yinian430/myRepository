@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    //科学技术法计数有问题
+    // function zeros (n) {
+    //   console.log(n)
+    //   var f = 1;
+    //   var num = 0;
+    //   for(var i = 1;i <= n;i++){
+    //     f = f*i;
+    //   }
+    //   var ary = f+"";
+    //   for(var i = ary.split("").length-1;i >= 0;i--){
+    //     if(ary[i] === "0"){
+    //       num = num+1;
+    //     }else{
+    //       break;
+    //     }
+    //   }
+    //   return num;
+    // }
+    //
+
+
+    //加了科学计数法？？？？？
+    // function zeros (n) {
+    //   var f = 1;
+    //   var num = 0;
+    //   var flag = false;
+    //   for(var i = 1;i <= n;i++){
+    //     f = f*i;
+    //   }
+    //   var ary = f.toString();
+    //   ary.split("").forEach(function(value,index){
+    //     if(value == "e"){
+    //       flag = true;
+    //     }
+    //   })
+    //   if(flag == true){
+    //     var str = ary.split("e")[0].split(".")[1].length;
+    //     var strZero = ary.split("e")[1].slice(1)-0;
+    //     var nUm = strZero - str;
+    //     return nUm;
+    //   }else{
+    //     for(var i = ary.split("").length-1;i >= 0;i--){
+    //       if(ary[i] === "0"){
+    //         num = num+1;
+    //       }else{
+    //         break;
+    //       }
+    //     }
+    //   }
+    //   return num;
+    // }
+    // var n = 30;
+    // console.log(zeros(n));
+
+    function scientificToNumber(num) {
+        var str = num.split("e")[0].split(".")[1].length;
+        var strZero = num.split("e")[1].slice(1)-0;
+        var nUm = strZero - str;
+        var numStr = num.split("e")[0];
+        for(var i = 0;i < nUm;i++){
+          numStr += 0;
+        }
+        return numStr;
+    }
+    console.log(scientificToNumber("2.6525285981219103e+32"))
+
+
+
+
+
+
+    //上面是科学计数法
+
+    // function solution(number){
+    //   var ary = number.toString().split("");
+    //   var str = number.toString().split("")[0]
+    //   for(var i = 0;i < ary.length;i++){
+    //     console.log(ary[i])
+    //   }
+    //   for(var i = 0;i < ary.length-1;i++){
+    //     str += "0";
+    //   }
+    //   console.log(str-0)
+    //   return number;
+    // }
+    // var number = 1900;
+    // console.log(solution(number))
+    </script>
+  </body>
+</html>

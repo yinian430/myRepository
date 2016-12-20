@@ -1,0 +1,109 @@
+/*body{
+  background: url("../img/background.jpg") no-repeat;
+  background-size: 100%;
+}*/
+.header {
+    width: 1000px;
+    margin: auto;
+    background-color: #EFF8FF;
+    border: 1px solid #98C2F2;
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+.header_nav {
+    color: #1372BF;
+}
+.fontW {
+    font-weight: 600;
+}
+.red_span {
+    color: #f00;
+}
+.content {
+    width: 1000px;
+    height: 573px;
+    margin: auto;
+    background-color: #EFF8FF;
+    border: 1px solid #98C2F2;
+    margin-top: 5px;
+    padding: 20px 10px;
+}
+.select{
+  width: 200px;
+  line-height: 35px;
+  font-size: 14px;
+  min-height: 238px;
+  background-color: #FFF!important;
+}
+.content_body{
+  margin: auto;
+  width: 700px;
+  margin-top: 35px;
+  padding: 0 90px;
+  overflow: hidden;
+}
+.addBtn{
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+.deleteBtn{
+  display: block;
+}
+.btnParent{
+  margin: 0px 20px;
+}
+.btnKeep{
+  margin: auto;
+  width: 64px;
+  margin-top: 10px;
+}
+.hint{
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+  display: block;
+  clear: both;
+  width: 700px;
+  margin: auto;
+  margin-top: 5px;
+}
+.hintTitle{
+  color: red;
+}
+
+.layer-anim-02{
+  z-index: 19891023;
+  width: 350px;
+  top: 144px;
+  left: 545px;
+}
+.layui-layer-title{
+  border: none;
+  background-color: #333!important;
+  color: #fff!important;
+}
+.layui-layer-content{
+  padding: 20px;
+}
+.layui-layer-molv .layui-layer-title{
+  background-color: #009f95!important;
+}
+.layui-layer-hong .layui-layer-title{
+  background-color: #FC0001!important;
+}
+.option{
+  color:#000;
+}
+.hoverSpan{
+  width: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /*width: 0;*/
+  /*height: 5px;*/
+  background-color: #5FB878;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  opacity: 1;
+}

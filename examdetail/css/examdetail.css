@@ -1,0 +1,302 @@
+body{
+	font-family: "微软雅黑";
+}
+.fl{
+	float: left;
+}
+.fr{
+  float: right;
+}
+.cb{
+	clear: both;
+}
+.oh{
+	overflow: hidden;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+.por{
+	position: relative;
+}
+.borB{
+	border-bottom: 1px solid #888;
+}
+.borRN{
+	border-right: none!important;
+}
+.borTN{
+	border-top: none!important;
+}
+.borBN{
+	border-bottom: none!important;
+}
+.borLN{
+	border-left: none!important;
+}
+
+.header {
+    width: 1000px;
+    margin: auto;
+    background-color: #EFF8FF;
+    border: 1px solid #98C2F2;
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+.header_nav {
+    color: #1372BF;
+}
+.content {
+    width: 1000px;
+    /*height: 573px;*/
+    margin: auto;
+    background-color: #EFF8FF;
+    border: 1px solid #98C2F2;
+    margin-top: 5px;
+    padding: 20px 10px;
+}
+.content_head{
+	width: 700px;
+	margin: auto;
+	text-align: center;
+	border: 1px solid #DDDDDD;
+}
+.form_school{
+	border: 1px solid #DDDDDD;
+	height: 38px;
+	background-color: #F9F9F9;
+	margin-bottom: 0;
+}
+.form_school:hover{
+	background-color: #F5F5F5;
+}
+.form_test{
+	background-color: #EFF8FF;
+}
+.formInput{
+	width: 274px;
+	margin-left: 300px;
+}
+.formInput input{
+	height: 28px;
+  border-radius: 5px;
+	position: relative;
+  top: 5px;
+	text-align: center;
+	border-color: #AAAAAA;
+}
+.formLabel{
+	width: 150px;
+	text-align: center;
+	border-right: 1px solid #ddd;
+	font-weight: 600;
+	font-size: 15px;
+}
+.formLabelSubjects{
+	width: 150px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  font-weight: 600;
+  font-size: 15px;
+}
+.form_subjects{
+	height: auto;
+}
+.formSubjects{
+	width: auto;
+	margin-left: 190px;
+  margin-right: 10px;
+	text-align: center;
+}
+.layui-form-checkbox{
+	margin-top: 4px;
+}
+
+
+/*主体*/
+.content_body {
+  width: 930px;
+  /*max-height: 500px;*/
+  margin: auto;
+  /*overflow-y: auto;*/
+  border-radius: 5px;
+	margin-top: 20px;
+	padding: 10px 20px;
+}
+.subjectsDetail{
+	border: 1px solid #888;
+	display: inline-block;
+	width: 99%;
+  height: 280px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.subjectsDetailLeft{
+	height: 270px;
+	line-height: 270px;
+	width: 60px;
+	text-align: center;
+	border-right: 1px solid #ddd;
+	padding: 5px 10px;
+}
+.subjectsDetailRight{
+	height: 270px;
+	/*line-height: 140px;*/
+	width: 810px;
+	text-align: center;
+	padding: 5px 10px;
+	margin-left: 5px;
+}
+/*每行高*/
+.everyH{
+	/*overflow: hidden;*/
+  height: 32px;
+}
+.everyHeight{
+	height: 30px;
+	line-height: 15px;
+	/*border: 1px solid #888;*/
+}
+.w130{
+	width: 120px;
+}
+.w150{
+	width: 150px;
+}
+.w100{
+	width: 100px;
+	line-height: 30px;
+}
+.w470{
+	width: 140px;
+}
+.w60{
+	width: 60px;
+	line-height: 30px;
+}
+.w30{
+	width: 60px;
+	margin-left: 23px;
+}
+.formTi{
+	margin-left: 0;
+}
+.formTi input{
+	width: 100px;
+  margin: auto;
+  height: 23px;
+  margin-top: 3px;
+  border-radius: 5px;
+	line-height: 23px;
+}
+.formKaodian{
+	margin-left: 0;
+	width: 70px!important;
+}
+.formKaodian input{
+	width: 70px;
+	height: 23px;
+	margin-top: 3px;
+	line-height: 23px;
+	margin-left: 10px;
+	border-radius: 5px;
+}
+.addKaodian{
+	color: #009688;
+	cursor: pointer;
+	border: 1px solid #009688;
+	border-radius: 7px;
+	padding: 0px 9px;
+	position: relative;
+	top: 7px;
+}
+.addKaodian:hover{
+	background-color: #009688;
+	color:#fff;
+}
+.addsub{
+	color: #009688;
+	cursor: pointer;
+	border: 1px solid #009688;
+	border-radius: 7px;
+	padding: 0px 9px;
+	line-height: 30px;
+}
+.addsub:hover{
+	background-color: #009688;
+	color:#fff;
+}
+.contentNone{
+	max-height: 230px;
+	overflow-y: auto;
+	min-height: 230px;
+}
+.buttonSub{
+	width: 30px;
+	cursor: pointer;
+	border-radius: 7px;
+	padding: 0px 9px;
+	height: 32px;
+	line-height: 32px;
+	/*margin: auto;*/
+	margin-top: 5px;
+	color: #29B8E0;
+	border: 1px solid #29B8E0;
+	margin-left: 337px;
+}
+.buttonSub:hover{
+	color: #fff;
+	background-color: #33BBDD;
+}
+.layui-layer-hong .layui-layer-title{
+	background-color: #F7B824;
+	color: #fff;
+}
+.layui-layer-cheng .layui-layer-title{
+	background-color: #FF5722;
+	color: #fff;
+}
+.tishiSpan{
+	color: #01AAED;
+}
+.zhuyi{
+	width: 780px;
+	margin: auto;
+	margin-top: 20px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #F00;
+	margin-bottom: -10px;
+}
+.deleteBut{
+	display: inline-block;
+	color: #009688;
+	cursor: pointer;
+	border: 1px solid #009688;
+	border-radius: 7px;
+	padding: 3px 9px;
+  margin-top: 4px;
+	margin-left: 4px;
+}
+.deleteBut:hover {
+    background-color: #009688;
+    color: #fff;
+}
+.smallTi{
+	margin: 2px 0;
+	background-color: #fff;
+}
+.layui-form-select .layui-input{
+	text-align: center;
+}
+.layui-form-select .layui-edge{
+	margin-top: 0;
+}
